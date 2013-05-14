@@ -1,0 +1,29 @@
+<h1>Listing trolls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Bio</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trolls.each do |troll| %>
+      <tr>
+        <td><%= troll.name %></td>
+        <td><%= troll.bio %></td>
+        <td><%= link_to 'Show', troll %></td>
+        <td><%= link_to 'Edit', edit_troll_path(troll) %></td>
+        <td><%= link_to 'Destroy', troll, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Troll', new_troll_path %>

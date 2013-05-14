@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @troll.name %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @troll.bio %>
+</p>
+
+<%= link_to 'Edit', edit_troll_path(@troll) %> |
+<%= link_to 'Back', trolls_path %>
